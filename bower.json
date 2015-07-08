@@ -1,14 +1,9 @@
 {
   "description": "",
-  "name": "guide-style-cleanly",
+  "name": "multi-tic-tac-toe_jquery",
   "private": true,
-  "version": "0.1.1",
-
+  "version": "0.1.0",
   "dependencies": {
-    "angular": "~1.3.4",
-    "angular-mocks": "~1.4.0",
-    "angular-ui-router": "~0.2.13",
-    "bootstrap-stylus": "~4.0.4",
-    "script.js": "~2.5.7"
+    "jquery": "~2.1.4"
   }
 }

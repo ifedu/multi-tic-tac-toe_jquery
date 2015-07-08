@@ -1,13 +1,9 @@
 include views/mixins/mixins
 doctype html
-html(
-    lang='es'
-    ng-app='styleguideWeb'
-    ng-controller='ParentCtrl as parentCtrl'
-)
+html(lang='es')
     head
         meta(charset='utf-8')
-        title Styleguide Web
+        title Multi-Tic-Tac-Toe jQuery
         meta(
             content=''
             name='description'
@@ -21,38 +17,24 @@ html(
             rel='stylesheet'
         )
     body
-        .main
+        .scenario
             .row
-               .col-md-1 .col-md-1
-               .col-md-1 .col-md-1
-               .col-md-1 .col-md-1
-               .col-md-1 .col-md-1
-               .col-md-1 .col-md-1
-               .col-md-1 .col-md-1
-               .col-md-1 .col-md-1
-               .col-md-1 .col-md-1
-               .col-md-1 .col-md-1
-               .col-md-1 .col-md-1
-               .col-md-1 .col-md-1
-               .col-md-1 .col-md-1
-            .row
-              .col-md-8 .col-md-8
-              .col-md-4 .col-md-4
-            .row
-              .col-md-4 .col-md-4
-              .col-md-4 .col-md-4
-              .col-md-4 .col-md-4
-            .row
-              .col-md-6 .col-md-6
-              .col-md-6 .col-md-6
+                .column
+                .column
+                .column
 
-            div(ui-view)
+            .row
+                .column
+                .column
+                .column
+
+            .row
+                .column
+                .column
+                .column
 
         +script-min-ini()
 
         +script-min('js/index.js')
-        +script-min('js/services/lazy.js')
-        +script-min('js/controllers/parent.ctrl.js')
-        +script-min('app/home/routes.js')
 
         +script-min-end()

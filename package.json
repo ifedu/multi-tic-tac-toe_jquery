@@ -1,8 +1,8 @@
 {
   "description": "",
-  "name": "guide-style-cleanly",
+  "name": "multi-tic-tac-toe_jquery",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.0",
 
   "devDependencies": {
     "browserify": "^10.2.0",

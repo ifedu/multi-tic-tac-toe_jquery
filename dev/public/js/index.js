@@ -1,11 +1,7 @@
-const app = angular
-.module('styleguideWeb', ['ui.router'])
-.config(($urlRouterProvider, $stateProvider, $controllerProvider, $compileProvider, $filterProvider, $provide) => {
-    app.controller = $controllerProvider.register
-    app.directive = $compileProvider.directive
-    app.filter = $filterProvider.register
-    app.factory = $provide.factory
-    app.service = $provide.service
+let select = 'X'
 
-    $urlRouterProvider.otherwise('/')
+$('.column').on('mousedown', function () {
+    $(this).text(select)
+
+    select = (select === 'X') ? 'O' : 'X'
 })
