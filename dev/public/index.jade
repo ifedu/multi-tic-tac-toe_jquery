@@ -18,20 +18,38 @@ html(lang='es')
         )
     body
         .scenario
-            .row
-                .column
-                .column
-                .column
+            .players
+                .player.playerX
+                    span X
+                    input
+                .player.playerO
+                    input
+                    span O
 
-            .row
-                .column
-                .column
-                .column
+            //- ROWS
+            - var i = 0
+            - var k = 0
 
-            .row
-                .column
-                .column
-                .column
+            while i < NUM
+                .row
+                    //- COLUMNS
+                    - var j = 0
+
+                    while j < NUM
+                        - var diagonal = (i === j) ? 'true' : false
+                        - var reverseDiagonal = (k === 2 || k === 4 || k === 6) ? 'true' : false
+
+                        .column(
+                            column-num=j
+                            is-diagonal=diagonal
+                            is-reverse-diagonal=reverseDiagonal
+                            row-num=i
+                        )
+                            img.none(src='assets/x.png')
+
+                        - j++
+                        - k++
+                - i++
 
         +script-min-ini()
 
