@@ -17,42 +17,20 @@ html(lang='es')
             rel='stylesheet'
         )
     body
-        .scenario
-            .players
-                .player.playerX
-                    span X
-                    input
-                .player.playerO
-                    input
-                    span O
+        .content
+            .scenario.styles.view-none
+                include views/_includes/scenario/main
 
-            //- ROWS
-            - var i = 0
-            - var k = 0
+            .start.styles
+                include views/_includes/start/main
 
-            while i < NUM
-                .row
-                    //- COLUMNS
-                    - var j = 0
-
-                    while j < NUM
-                        - var diagonal = (i === j) ? 'true' : false
-                        - var reverseDiagonal = (k === 2 || k === 4 || k === 6) ? 'true' : false
-
-                        .column(
-                            column-num=j
-                            is-diagonal=diagonal
-                            is-reverse-diagonal=reverseDiagonal
-                            row-num=i
-                        )
-                            img.none(src='assets/x.png')
-
-                        - j++
-                        - k++
-                - i++
+            .user.styles.view-none
+                include views/_includes/user/main
 
         +script-min-ini()
 
-        +script-min('js/index.js')
+        +script-min('js/scenario.js')
+        +script-min('js/start.js')
+        +script-min('js/user.js')
 
         +script-min-end()

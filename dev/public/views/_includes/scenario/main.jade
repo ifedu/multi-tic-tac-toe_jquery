@@ -1,0 +1,40 @@
+.win.styles.margin-bottom.fix
+    .column-left
+        input(
+            play
+            type='button'
+            value='Back'
+        )
+
+.players
+    .player.playerX
+        span X
+        input
+    .player.playerO
+        input
+        span O
+
+//- ROWS
+- var i = 0
+- var k = 0
+
+while i < NUM
+    .row
+        //- COLUMNS
+        - var j = 0
+
+        while j < NUM
+            - var diagonal = (i === j) ? 'true' : false
+            - var reverseDiagonal = (k === 2 || k === 4 || k === 6) ? 'true' : false
+
+            .column(
+                column-num=j
+                is-diagonal=diagonal
+                is-reverse-diagonal=reverseDiagonal
+                row-num=i
+            )
+                img.none(src='assets/x.png')
+
+            - j++
+            - k++
+    - i++

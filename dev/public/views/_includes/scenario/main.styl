@@ -1,0 +1,60 @@
+.scenario
+    font-family arial
+    user-select none
+    -webkit-user-select none
+
+    .players
+        height 30px
+
+        .player
+            float left
+            width 50%
+
+            input
+                vertical-align bottom
+                width 150px
+
+            span
+                padding 0 10px
+
+        .playerX
+            color #BB4444
+            text-align left
+
+        .playerO
+            color #44BB44
+            text-align right
+
+    .row
+        height 200px
+
+        .column
+            background no-repeat center center
+            border 1px solid
+            cursor pointer
+            display table-cell
+            height 200px
+            vertical-align middle
+            width 200px
+
+            &.border-o
+                border 2px solid #44BB44
+
+            &.border-x
+                border 2px solid #BB4444
+
+            &.lost
+                opacity 0.4
+
+            &.pushed
+                cursor auto
+
+            &.win
+                opacity 1
+
+            img
+                max-height 192px
+                max-width 196px
+
+                &.none
+                    display none
