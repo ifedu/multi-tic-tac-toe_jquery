@@ -1,4 +1,4 @@
-## ??/07/2015 v.0.3.0
+## v.0.3.0
     - Pantalla de login y de configuración del usuario
 
 ## 12/07/2015 v.0.2.0

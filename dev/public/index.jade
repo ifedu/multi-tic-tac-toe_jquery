@@ -19,18 +19,24 @@ html(lang='es')
     body
         .content
             .scenario.styles.view-none
-                include views/_includes/scenario/main
+                include views/includes/scenario/_main
 
             .start.styles
-                include views/_includes/start/main
+                include views/includes/start/_main
 
             .user.styles.view-none
-                include views/_includes/user/main
+                include views/includes/user/_main
+
+        .load.styles.view-none
+            .background
+            .loader
+                .loader-center
+                    img(src='assets/ajax-loader.gif')
 
         +script-min-ini()
 
-        +script-min('js/scenario.js')
-        +script-min('js/start.js')
-        +script-min('js/user.js')
+        +script-min('views/includes/scenario/main.js')
+        +script-min('views/includes/start/main.js')
+        +script-min('views/includes/user/main.js')
 
         +script-min-end()

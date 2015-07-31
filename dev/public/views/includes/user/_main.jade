@@ -6,19 +6,40 @@
     .column-right
         span 0
 
-.lose.styles.margin-bottom.fix
+.lose.styles.margin-bottom-x2.fix
     .column-left
         span Lose
 
     .column-right
         span 0
 
-.login.styles.margin-bottom-x2.fix
+form.login.styles.margin-bottom-x2.fix(
+    action='http://127.0.0.1:80/multi-tic-tac-toe_php/?code=upload'
+    enctype='multipart/form-data'
+    method='POST'
+    target='iframe-upload'
+)
     .column-left
-        span Image
+        span.styles.margin-bottom Image
+        input(
+            type='submit'
+            value='Guardar'
+        )
 
     .column-right
-        input
+        img.img-upload.styles.view-hidden
+
+    input.styles.fix.margin-bottom(
+        name='file'
+        type='file'
+    )
+
+    input(
+        name='user'
+        type='hidden'
+    )
+
+    iframe#iframe-upload.styles.view-none(name='iframe-upload')
 
 .styles.margin-bottom Challenge
 .challenge.styles.margin-bottom-x2.fix
@@ -34,7 +55,7 @@
 
 .challenges-wainting.styles.margin-bottom Challenges Waiting
 
-.btn.fix
+.btn.styles.margin-bottom.fix
     .column-left
     .column-right
         input(
