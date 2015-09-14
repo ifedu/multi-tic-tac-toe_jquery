@@ -1,0 +1,83 @@
+*
+    box-sizing border-box
+
+body
+    font-family 'arial'
+    margin 0
+
+.fix
+    &:before, &:after
+        clear both
+        content ' '
+        display table
+
+.load
+    .background
+        background-color #000
+        height 100%
+        opacity 0.3
+        position absolute
+        top 0
+        width 100%
+
+    .loader
+        display table
+        height 100%
+        position absolute
+        top 0
+        width 100%
+
+        .loader-center
+            display table-cell
+            text-align center
+            vertical-align middle
+
+.content
+    margin auto
+    text-align center
+    width 600px
+
+.styles
+    &.align-left
+        text-align left
+
+    &.align-right
+        text-align right
+
+    &.margin-bottom
+        margin-bottom 10px
+
+    &.margin-bottom-x2
+        margin-bottom 20px
+
+    &.margin-left
+        margin-left 10px
+
+    &.margin-right
+        margin-right 10px
+
+    &.margin-top
+        margin-top 10px
+
+    &.margin-y
+        margin-bottom 10px
+        margin-top 10px
+
+    &.view-hidden
+        visibility hidden
+
+    &.view-none
+        display none
+
+.column-left
+    float left
+    margin-left -40px
+    min-height 1px
+    padding-right 10px
+    text-align right
+    width 50%
+
+.column-right
+    float left
+    text-align left
+    width 50%

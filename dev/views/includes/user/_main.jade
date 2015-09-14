@@ -1,0 +1,68 @@
+.name-user.styles.margin-bottom
+.win.styles.margin-bottom.fix
+    .column-left
+        span Win
+
+    .column-right
+        span 0
+
+.lose.styles.margin-bottom-x2.fix
+    .column-left
+        span Lose
+
+    .column-right
+        span 0
+
+form.styles.margin-bottom-x2.fix(
+    action='http://127.0.0.1:80/multi-tic-tac-toe_php/?code=upload'
+    enctype='multipart/form-data'
+    method='POST'
+    target='iframe-upload'
+)
+    .column-left
+        span.styles.margin-bottom Image
+        input(
+            type='submit'
+            value='Guardar'
+        )
+
+    .column-right.styles.margin-bottom
+        img.img-upload.styles.view-hidden
+
+    .fix
+        input.styles.margin-bottom(
+            name='file'
+            type='file'
+        )
+
+        input(
+            name='user'
+            type='hidden'
+        )
+
+    iframe#iframe-upload.styles.margin-top.view-none(name='iframe-upload')
+
+.styles.margin-bottom Challenge
+.challenge.styles.margin-bottom-x2.fix
+    .column-left
+        input.styles.align-right(user-val)
+
+    .column-right
+        input(
+            play
+            type='button'
+            value='Play'
+        )
+
+        .challenge-user.styles.margin-left.view-hidden User not found
+
+.challenges-wainting.styles.margin-bottom Challenges Waiting
+
+.btn.styles.margin-bottom.fix
+    .column-left
+    .column-right
+        input(
+            exit
+            type='button'
+            value='Exit'
+        )
